@@ -1,0 +1,13 @@
+.git
+.venv
+artifacts
+docs
+pipeline
+**/node_modules
+**/.next
+**/__pycache__
+frontend/data
+frontend/storage
+**/.env
+**/.env.*
+!**/.env.example

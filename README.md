@@ -66,7 +66,7 @@ Four worked examples play as a live walkthrough, including a refusal when the ev
 
 ```mermaid
 flowchart LR
-    A[Student uploads notes] --> B[Extract text from<br/>PDF, PPT, DOC, TXT]
+    A[Student uploads notes] --> B[Extract text from<br/>PDF, PPTX, TXT]
     B --> C[Split into chunks<br/>and embed]
     C --> D[(Student's<br/>private index)]
     E[Student asks a question] --> F[Retrieve and rerank<br/>relevant passages]

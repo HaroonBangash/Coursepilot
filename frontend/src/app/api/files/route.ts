@@ -9,7 +9,8 @@ import { ingestUserFile } from '@/lib/pipeline';
 import { getUserProfile } from '@/lib/profile-store';
 import { writeStudentProfileSnapshot, writeUploadRecord } from '@/lib/rag-records';
 
-const allowedExt = new Set(['.pdf', '.ppt', '.pptx', '.doc', '.docx', '.txt']);
+const allowedExt = new Set(['.pdf', '.pptx', '.txt']);
+const MAX_UPLOAD_BYTES = 25 * 1024 * 1024;
 
 function moduleGuess(filename: string) {
   const lower = filename.toLowerCase();
@@ -65,6 +66,10 @@ export async function POST(req: NextRequest) {
     const ext = path.extname(f.name).toLowerCase();
     if (!allowedExt.has(ext)) {
       return NextResponse.json({ error: 'Unsupported file type.' }, { status: 400 });
+    }
+
+    if (f.size > MAX_UPLOAD_BYTES) {
+      return NextResponse.json({ error: 'File is too large. The limit is 25 MB.' }, { status: 413 });
     }
 
     const id = crypto.randomUUID();

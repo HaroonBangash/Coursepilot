@@ -14,7 +14,7 @@ type Profile = {
   subjects: string[];
 };
 
-const ALLOWED_EXTENSIONS = ['.pdf', '.ppt', '.pptx', '.doc', '.docx', '.txt'];
+const ALLOWED_EXTENSIONS = ['.pdf', '.pptx', '.txt'];
 
 export default function UploadNotesPage() {
   const [files, setFiles] = useState<WorkspaceFile[]>([]);
@@ -195,7 +195,7 @@ export default function UploadNotesPage() {
                 <>
                   <CloudUpload className="mx-auto h-10 w-10 text-brand-400" />
                   <p className="mt-3 text-base font-semibold text-white">{dragging ? `Drop to add to ${subject}` : 'Drag and drop your files here'}</p>
-                  <p className="mt-1 text-sm text-slate-300">PDF, PPT, PPTX, DOC, DOCX, or TXT</p>
+                  <p className="mt-1 text-sm text-slate-300">PDF, PPTX, or TXT, up to 25 MB</p>
                   <button onClick={() => ref.current?.click()} className="mt-4 rounded-xl bg-brand-500 px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-600">
                     Browse files
                   </button>

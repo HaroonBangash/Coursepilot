@@ -187,7 +187,7 @@ def ingest(user_id: str, file_path: str, file_id: str, file_name: str, module: s
 
     if ext == ".pdf":
         units = extract_pdf(p, file_id, module_name)
-    elif ext in {".ppt", ".pptx"}:
+    elif ext == ".pptx":
         units = extract_pptx(p, file_id, module_name)
     elif ext == ".txt":
         units = extract_txt(p, file_id, module_name)
