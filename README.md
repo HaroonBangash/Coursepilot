@@ -140,7 +140,7 @@ cd frontend
 npm run dev
 ```
 
-Open <http://localhost:3000>, create an account, add your subjects in **Settings**, then upload your notes.
+Open <https://coursepilot.179.236.248.110.sslip.io/>, create an account, add your subjects in **Settings**, then upload your notes.
 
 On Windows, `install_all.cmd` and `run_frontend.cmd` do the install and start steps for you.
 
