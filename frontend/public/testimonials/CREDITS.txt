@@ -1,0 +1,8 @@
+Photos from Unsplash (https://unsplash.com/license), fetched from images.unsplash.com.
+Photo ID is the part after "photo-" in the image URL.
+
+laptop-and-notebook.jpg  1501504905252-473c47e087f8
+library-shelves.jpg      1481627834876-b7833e8f5570
+open-books.jpg           1456513080510-7bf3a84b82f8
+writing-notes.jpg        1434030216411-0b793f4b4173
+study-desk.jpg           1488190211105-8b0e65b80b4e

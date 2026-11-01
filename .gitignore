@@ -1,0 +1,31 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Student accounts, uploaded notes, and search indexes
+frontend/data/
+frontend/storage/
+
+# Course content, evaluation output, and dissertation drafts
+pipeline/data/
+pipeline/input/
+artifacts/
+
+# Dependencies and build output
+.venv/
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Editor and system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
