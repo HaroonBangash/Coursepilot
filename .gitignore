@@ -29,3 +29,8 @@ __pycache__/
 .DS_Store
 Thumbs.db
 *.log
+
+# One-off evaluation helpers tied to a local machine
+frontend/scripts/*
+!frontend/scripts/rag_user_pipeline.py
+docs/PORTABILITY_NOTES.md

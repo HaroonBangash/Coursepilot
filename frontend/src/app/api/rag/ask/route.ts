@@ -139,7 +139,7 @@ async function groundedLLMAnswer(query: string, mode: 'answer' | 'summary', evid
   if (!evidence.length) return fallbackInsufficient();
 
   const apiKey = process.env.GEMINI_API_KEY;
-  const model = process.env.RAG_LLM_MODEL || 'gemini-2.5-flash';
+  const model = process.env.RAG_LLM_MODEL || 'gemini-3.8-flash';
   if (!apiKey) {
     return providerUnavailable(undefined, 'GEMINI_API_KEY is missing');
   }
