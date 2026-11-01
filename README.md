@@ -4,6 +4,8 @@
 
 General AI chatbots can sound confident while being wrong, and students can't easily check them. CoursePilot takes the opposite approach: answers are built from the student's uploaded slides and documents, each one cites its source, and each one carries a clear evidence label.
 
+**[Try the live prototype](https://coursepilot.179.236.248.110.sslip.io)**
+
 > **Status: working prototype.** The core flow runs end to end: sign up, upload notes, ask questions, and get cited answers. See [Current limitations](#current-limitations) for what a production release would still need.
 
 ![CoursePilot home page](docs/screenshots/home.png)
@@ -161,7 +163,7 @@ docs/               Architecture notes and screenshots
 
 This is a prototype, and these are known gaps:
 
-- **Speed:** answers currently take around a minute, because the search models reload for each question.
+- **Speed:** answers took about 20 seconds in testing on the hosted server, partly because the search models reload for each question.
 - **Storage:** data is kept in local JSON files, so a production release needs a proper database.
 - **Concurrency:** it is designed for small demos and single-server use, not many simultaneous students.
 - **Illustrative content:** students and feedback on the home page are placeholders, not real testimonials.
@@ -170,8 +172,7 @@ This is a prototype, and these are known gaps:
 
 ## Roadmap
 
-1. Deploy to a hosted server with HTTPS.
-2. Keep the search models loaded to cut response times.
-3. Move accounts and records to a production database.
-4. Add an automated test suite and re-run the benchmark on the live model.
-5. Pilot with real students and replace illustrative feedback with real quotes, with their permission.
+1. Keep the search models loaded to cut response times.
+2. Move accounts and records to a production database.
+3. Add an automated test suite and re-run the benchmark on the live model.
+4. Pilot with real students and replace illustrative feedback with real quotes, with their permission.

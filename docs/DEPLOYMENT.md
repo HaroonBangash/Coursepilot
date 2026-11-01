@@ -25,7 +25,7 @@ CoursePilot runs as a Docker container on a Linux server. Uploaded notes and acc
 
 4. Make the app public, using one of these:
    - **Nothing is using ports 80 and 443:** add `--profile proxy` to the command above. Caddy serves the site and manages its HTTPS certificate.
-   - **The server already runs a web server:** forward your site's address to `127.0.0.1:3100` from that web server.
+   - **The server already runs nginx:** use `deploy/nginx-coursepilot.conf`, then add HTTPS with certbot.
 
 ## Updating
 
